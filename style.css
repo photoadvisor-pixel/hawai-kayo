@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    --main-bg: #F2F1EF;
+    /* Hermes-like Off-White/Beige */
+    --text-color: #080808;
+    /* Soft Black */
+    --accent-color: #E66F02;
+    /* Hermes Orange */
+    --chanel-black: #000000;
+    /* Chanel Black */
+    --chanel-white: #FFFFFF;
+    /* Chanel White */
+    --secondary-accent: #D9B18E;
+    /* Champagne Gold */
+    --font-serif: "Playfair Display", "Hiragino Mincho ProN", "Yu Mincho", serif;
+    --font-sans: "Montserrat", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    line-height: 2.0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #fff;
+    /* Paper-like feel */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Chanel-like crisp header */
+.header-accent {
+    background-color: var(--chanel-black);
+    color: var(--chanel-white);
+    padding: 10px 0;
+    text-align: center;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    color: var(--text-color);
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+h1.title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 0.5em;
+    color: var(--chanel-black);
+    border-bottom: none;
+}
+
+.subtitle {
+    text-align: center;
+    font-family: var(--font-sans);
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+/* Hermes-style headings */
+h2 {
+    font-size: 1.8rem;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 20px;
+    color: var(--chanel-black);
+    margin-top: 3rem;
+    position: relative;
+}
+
+/* Subtle orange underline for H2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 100px;
+    height: 1px;
+    background-color: var(--secondary-accent);
+}
+
+h3 {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-top: 2.5rem;
+}
+
+p {
+    margin-bottom: 1.5em;
+    text-align: justify;
+    font-weight: 300;
+}
+
+ul {
+    list-style-type: none;
+    /* Elegant list */
+    padding-left: 0;
+}
+
+li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 0.8em;
+}
+
+li::before {
+    content: '•';
+    color: var(--accent-color);
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-size: 0.95rem;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+th {
+    border-top: 2px solid var(--chanel-black);
+    border-bottom: 2px solid var(--chanel-black);
+    color: var(--chanel-black);
+    font-family: var(--font-serif);
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background-color: rgba(230, 111, 2, 0.03);
+    /* Slight orange tint on hover */
+}
+
+/* Quote/Emphasis */
+strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+/* Cover Page Area */
+.cover {
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #eee;
+}
+
+.cover-author {
+    margin-top: 40px;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: #666;
+}
+
+@media print {
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+}
