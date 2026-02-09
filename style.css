@@ -191,3 +191,9 @@ strong {
         max-width: 100%;
     }
 }
+
+.date-span {
+    color: #666;
+    font-size: 0.9em;
+    margin-right: 10px;
+}
